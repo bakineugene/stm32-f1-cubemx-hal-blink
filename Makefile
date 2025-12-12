@@ -56,7 +56,7 @@ Core/Src/syscalls.c
 
 # ASM sources
 ASM_SOURCES =  \
-startup_stm32f103x6.s
+cmsis/Source/Templates/gcc/startup_stm32f103x6.s
 
 # ASMM sources
 ASMM_SOURCES = 
