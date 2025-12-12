@@ -11,12 +11,17 @@ int main(void) {
 
   MX_GPIO_Init();
 
+  int delay = 10;
+  int step = 10;
   while (1) {
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET); // LED ON
-    HAL_Delay(500);
+    HAL_Delay(delay += step);
 
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);   // LED OFF
-    HAL_Delay(100);
+    HAL_Delay(delay += step);
+
+    if (delay > 400) step = -10;
+    if (delay < 20) step = 10;
   }
 }
 
@@ -48,8 +53,6 @@ static void MX_GPIO_Init(void) {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   __HAL_RCC_GPIOC_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
 
