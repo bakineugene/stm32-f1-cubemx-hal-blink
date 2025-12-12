@@ -118,8 +118,8 @@ C_INCLUDES =  \
 -ICore/Inc \
 -Ihal_driver/Inc/Legacy \
 -Ihal_driver/Inc \
--IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
--IDrivers/CMSIS/Include
+-Icmsis/Include \
+-Icmsis_core/Include
 
 
 # compile gcc flags
