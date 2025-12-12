@@ -36,9 +36,9 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
-Core/Src/main.c \
-Core/Src/stm32f1xx_it.c \
-Core/Src/stm32f1xx_hal_msp.c \
+src/main.c \
+src/stm32f1xx_it.c \
+src/stm32f1xx_hal_msp.c \
 hal_driver/Src/stm32f1xx_hal_gpio_ex.c \
 hal_driver/Src/stm32f1xx_hal.c \
 hal_driver/Src/stm32f1xx_hal_rcc.c \
@@ -51,8 +51,8 @@ hal_driver/Src/stm32f1xx_hal_flash.c \
 hal_driver/Src/stm32f1xx_hal_flash_ex.c \
 hal_driver/Src/stm32f1xx_hal_exti.c \
 cmsis/Source/Templates/system_stm32f1xx.c \
-Core/Src/sysmem.c \
-Core/Src/syscalls.c
+src/sysmem.c \
+src/syscalls.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -115,7 +115,7 @@ AS_INCLUDES =
 
 # C includes
 C_INCLUDES =  \
--ICore/Inc \
+-Iinclude \
 -Ihal_driver/Inc/Legacy \
 -Ihal_driver/Inc \
 -Icmsis/Include \
